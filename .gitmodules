@@ -1,0 +1,6 @@
+[submodule "jitterentropy-library"]
+	path = jitterentropy-library
+	url = git@github.com:smuellerDD/jitterentropy-library.git
+[submodule "botan"]
+	path = botan
+	url = git@github.com:randombit/botan.git
