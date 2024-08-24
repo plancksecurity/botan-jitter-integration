@@ -1,4 +1,4 @@
-all: botan jitter
+all: botan
 
 .PHONY: \
 	botan botan-check \
@@ -34,12 +34,11 @@ botan/Makefile:
 			--without-rst2man \
 			--without-doxygen \
 			--without-boost \
-			--without-openssl \
 			--without-sqlite3
 
-botan: botan/Makefile
+botan: jitter botan/Makefile
 	$(MAKE) -C botan libs
 	$(MAKE) -C botan install
 
-botan-check: botan/Makefile
+botan-check: jitter botan/Makefile
 	$(MAKE) -C botan check
