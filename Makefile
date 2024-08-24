@@ -1,7 +1,8 @@
-all: botan
+all: botan jitter
 
 .PHONY: \
 	botan botan-check \
+	jitter \
 	clean
 
 export PREFIX?=${PWD}/local
@@ -9,7 +10,13 @@ export BUILD?=${PWD}/build
 
 clean:
 	rm -f botan/Makefile
+	rm -fr ${BUILD}
 	rm -fr ${PREFIX}
+
+jitter:
+	cmake -S jitterentropy-library -B  ${BUILD}
+	cmake --build ${BUILD}
+	cmake --install ${BUILD} --prefix ${PREFIX}
 
 botan/Makefile:
 	cd botan && \
