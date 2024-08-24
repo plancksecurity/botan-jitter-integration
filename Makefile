@@ -5,8 +5,11 @@ all: botan jitter
 	jitter \
 	clean
 
-export PREFIX?=${PWD}/local
-export BUILD?=${PWD}/build
+PREFIX?=${PWD}/local
+BUILD?=${PWD}/build
+
+PREFIX_INCLUDE=$(PREFIX)/include
+PREFIX_LIB=$(PREFIX)/lib
 
 clean:
 	rm -f botan/Makefile
@@ -22,6 +25,8 @@ botan/Makefile:
 	cd botan && \
 		./configure.py \
 			--prefix=$(PREFIX) \
+			--extra-cxxflags=-I$(PREFIX_INCLUDE) \
+			--ldflags=-L$(PREFIX_LIB) \
 			--without-documentation \
 			--without-sphinx
 			--with-debug-info \
