@@ -1,6 +1,8 @@
 [submodule "jitterentropy-library"]
 	path = jitterentropy-library
 	url = git@github.com:smuellerDD/jitterentropy-library.git
+	branch = master
 [submodule "botan"]
 	path = botan
 	url = git@github.com:plancksecurity/botan-jitter.git
+	branch = jitter
