@@ -28,7 +28,7 @@ botan/Makefile:
 			--extra-cxxflags=-I$(PREFIX_INCLUDE) \
 			--ldflags=-L$(PREFIX_LIB) \
 			--without-documentation \
-			--without-sphinx
+			--without-sphinx \
 			--with-debug-info \
 			--without-pdf \
 			--without-rst2man \

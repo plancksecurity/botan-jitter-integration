@@ -3,4 +3,4 @@
 	url = git@github.com:smuellerDD/jitterentropy-library.git
 [submodule "botan"]
 	path = botan
-	url = git@github.com:randombit/botan.git
+	url = git@github.com:plancksecurity/botan-jitter.git
