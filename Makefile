@@ -41,5 +41,5 @@ botan: jitter botan/Makefile
 	$(MAKE) -C botan libs
 	$(MAKE) -C botan install
 
-botan-check: jitter botan/Makefile
+botan-check: botan
 	$(MAKE) -C botan check
