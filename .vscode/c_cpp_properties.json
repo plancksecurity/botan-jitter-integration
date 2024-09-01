@@ -4,7 +4,8 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/local/include/botan-3"
+                "${workspaceFolder}/local/include/botan-3",
+                "${workspaceFolder}/botan/build/include/internal/"
             ],
             "defines": [],
             "macFrameworkPath": [

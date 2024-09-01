@@ -27,7 +27,7 @@ botan/Makefile:
 			--prefix=$(PREFIX) \
 			--extra-cxxflags=-I$(PREFIX_INCLUDE) \
 			--ldflags=-L$(PREFIX_LIB) \
-			--enable-module="jitter" \
+			--enable-module="jitter_rng" \
 			--without-documentation \
 			--without-sphinx \
 			--with-debug-info \
