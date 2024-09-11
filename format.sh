@@ -1,4 +1,6 @@
 #!/bin/sh
 
-clang-format-mp-17 -i botan/src/lib/rng/jitter_rng/jitter*
-clang-format-mp-17 -i botan/src/tests/test_jitter_rng.cpp
+./botan/src/scripts/dev_tools/run_clang_format.py \
+    --clang-format=clang-format-17 \
+    --src-dir=botan/src \
+    --clang-format-binary clang-format-mp-17
