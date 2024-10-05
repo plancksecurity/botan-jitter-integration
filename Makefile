@@ -1,7 +1,7 @@
 all: botan
 
 .PHONY: \
-	botan botan-check \
+	botan check test \
 	jitter \
 	clean
 
@@ -41,5 +41,8 @@ botan: jitter botan/Makefile
 	$(MAKE) -C botan libs
 	$(MAKE) -C botan install
 
-botan-check: botan
+check: botan
 	$(MAKE) -C botan check
+
+test: botan
+	botan/botan-test --data-dir=botan/src/tests/data --abort-on-first-fail
