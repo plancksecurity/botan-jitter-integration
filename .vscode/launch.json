@@ -7,7 +7,7 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug",
+            "name": "Debug jitter_rng_unit",
             "program": "${workspaceFolder}/botan/botan-test",
             "args": [
                 "--data-dir=${workspaceFolder}/botan/src/tests/data",
