@@ -50,4 +50,4 @@ check: botan
 	$(MAKE) -C botan check
 
 test: botan
-	botan/botan-test --data-dir=botan/src/tests/data --abort-on-first-fail
+	botan/botan-test --data-dir=botan/src/tests/data --abort-on-first-fail jitter_rng_unit
