@@ -11,6 +11,10 @@ BUILD?=${PWD}/build
 PREFIX_INCLUDE=$(PREFIX)/include
 PREFIX_LIB=$(PREFIX)/lib
 
+ifdef DEBUG
+    BOTAN_DEBUG_MODE=--debug-mode
+endif
+
 clean:
 	rm -f botan/Makefile
 	rm -fr ${BUILD}
@@ -31,6 +35,7 @@ botan/Makefile:
 			--without-documentation \
 			--without-sphinx \
 			--with-debug-info \
+			$(BOTAN_DEBUG_MODE) \
 			--without-pdf \
 			--without-rst2man \
 			--without-doxygen \
