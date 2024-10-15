@@ -12,7 +12,7 @@ cmake_host_system_information(RESULT THE_OS_NAME QUERY OS_NAME)
 
 if(${THE_OS_NAME} STREQUAL "Windows")
 set(JITTER_LIB_BASE jitterentropy.lib)
-set(BOTAN_LIB_BASE botan.lib)
+set(BOTAN_LIB_BASE botan-3.lib)
 endif()
 
 cmake_path(SET PREFIX_INCLUDE NORMALIZE ${LOCAL_DIR}/include)
@@ -44,7 +44,9 @@ add_custom_command(
             --build-tool=ninja
             --cc=msvc
             --os=windows
+            --prefix=${PREFIX}
     COMMAND ninja
+    COMMAND ninja install
 )
 
 add_custom_target(
